@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airline Customer Analytics</title>
+  <link rel="stylesheet" href="airline.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <script src="airline.js"></script>
+  <link rel="icon" type="image/png" href="Images/title.png">
+
+</head>
+<body>
+
+
+    <div class="mobile-warning">
+  <div class="warning-box">
+    <p>This experience is best viewed on a larger screen.<br>Please visit on a desktop for full exploration.</p>
+  </div>
+</div>
+
+  <!-- TITLE + SLOGAN SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="gradient-title">Airline Customer Satisfaction Analysis</h1>
+      <p class="slogan">
+        Imagine standing at the gate, asking every passenger:<br />
+        <span class="quote">"How was your flight?"</span>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- STORY-DRIVEN INTRO SECTION -->
+<section class="story-section">
+<h2 class="section-heading">Behind Every Flight, There’s a Story</h2>
+  
+  <p class="story-text">
+    Picture this: An airline named <strong>CloudAir</strong> was once the top choice for travelers across the country. 
+    But over time, little things started to slip, uncomfortable seats, poor food, and ignored feedback.
+    Passengers didn’t complain loudly… they just stopped booking.
+  </p>
+  
+  <p class="story-text">
+    What happened? Their team never paid attention to customer satisfaction. No insights. No action.
+  </p>
+
+  <p class="transition-line">That feels important, right?</p>
+
+  <p class="story-text">
+    So here’s where I stepped in.
+  </p>
+
+  <h3 class="sub-heading">My Take on the Problem</h3>
+  <p class="story-text">
+    I found a passenger satisfaction dataset on Kaggle, from an unnamed airline.  
+    But that didn’t stop me from digging deep and finding meaningful insights that any airline can use.
+  </p>
+</section>
+
+
+
+<!-- RAW DATA PEEK -->
+<section class="data-peek">
+  <h3 class="section-heading">A Glimpse of the Raw Data</h3>
+  <p class="intro-text">
+    This is the original passenger feedback straight from Kaggle.  
+    Scroll to see more rows or columns.
+  </p>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr id="table-header"><!-- will fill dynamically --></tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- JS will inject first 5–10 rows here -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+
+
+<!-- DASHBOARD EMBED -->
+<section class="dashboard-section">
+
+  <p class="dashboard-note">
+    Make sure to click the ⛶ icon in the bottom-right to go full screen and explore!
+  </p>
+
+  <div class="dashboard-container">
+    <!-- ─────── Tableau embed starts here ─────── -->
+<div
+  id="viz1753746662137"
+  class="tableauPlaceholder"
+  style="position: relative; width: 100%; height: 100%;"
+>
+  <noscript>
+    <a href="#">
+      <img
+        alt="Dashboard 1"
+        src="https://public.tableau.com/static/images/Ai/AirlinesCustomerSatisfactionAnalytics/Dashboard1/1_rss.png"
+        style="border:none; width:100%; height:auto;"
+      />
+    </a>
+  </noscript>
+
+  <object
+    class="tableauViz"
+    style="width: 100%; height: 100%;"
+  >
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="AirlinesCustomerSatisfactionAnalytics/Dashboard1" />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+        <param name="static_image" value="https://public.tableau.com/static/images/Ai/AirlinesCustomerSatisfactionAnalytics/Dashboard1/1.png" />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+        <param name="filter" value="publish=yes" />
+      </object>
+    </div>
+
+    <script type="text/javascript">
+      // Fit the viz to the container size
+      var divElement = document.getElementById('viz1753746662137');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      vizElement.style.width  = '100%';
+      vizElement.style.height = '100%';
+
+      // Load Tableau’s JS API
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+    <!-- ─────── Tableau embed ends here ─────── -->
+  </div>
+</section>
+
+
+
+
+
+
+<!-- INSIGHTS SECTION -->
+<section class="insights-section">
+  <h3 class="section-heading">Deep Dive Insights</h3>
+
+  <!-- Tab Buttons -->
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-tab="cleanliness">Cleanliness</button>
+    <button class="tab" data-tab="comfort">Comfort</button>
+    <button class="tab" data-tab="service">In-Flight Service</button>
+    <button class="tab" data-tab="class">Travel Class</button>
+    <button class="tab" data-tab="age">Age Group</button>
+    <button class="tab" data-tab="food">Food & Drink</button>
+
+
+    <!-- add/remove tabs as you like -->
+     <div class="tab-slider"></div>
+  </div>
+
+  <!-- Tab Panels -->
+  <div class="tab-content">
+    <div class="tab-panel" id="cleanliness">
+      <!-- Example insight card -->
+      <div class="insight-card">
+        <h4>✈️ Cleanliness Counts</h4>
+        <ul>
+        <li>Nearly 1 in 3 flyers rated cleanliness poorly.</li>
+        <li>Satisfied passengers give much higher cleanliness scores than unsatisfied ones.</li>
+        <li>A clean cabin builds trust, crucial post-COVID, where hygiene equals safety.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-panel hidden" id="comfort">
+      <div class="insight-card">
+        <h4>💺 Comfort is Critical</h4>
+        <ul>
+            <li>Half of passengers found seats uncomfortable.</li>
+            <li>A 1-point rating gap in comfort exists between happy and unhappy flyers.</li>
+            <li>Even small comfort upgrades (padding, recline) can change perception.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-panel hidden" id="service">
+      <div class="insight-card">
+        <h4>👨‍✈️ Service Shapes Sentiment</h4>
+        <ul>
+            <li>About 25% felt onboard service was poor or impersonal.</li>
+            <li>Happy flyers rate crew service 4+/5, unhappy ones closer to 3/5.</li>
+            <li>Friendly, attentive staff are a key reason passengers return.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-panel hidden" id="class">
+      <div class="insight-card">
+        <h4>🎫 Class Defines Experience</h4>
+        <ul>
+            <li>Business class flyers are 3× more satisfied than those in economy seats.</li>
+            <li>Economy class suffers from poor ratings.</li>
+            <li>Improve economy service to bridge the satisfaction gap and retain flyers.</li>
+        </ul>
+      </div>
+    </div>
+
+        <div class="tab-panel hidden" id="age">
+      <div class="insight-card">
+        <h4>👤 Age Impacts Expectations</h4>
+        <ul>
+            <li>Middle-aged travelers (30–60) are the most satisfied group overall.</li>
+            <li>Young passengers and seniors show lowest satisfaction, likely from unmet needs.</li>
+            <li>Tailoring services by age (comfort, tech, assistance) can boost retention.</li>
+        </ul>
+      </div>
+    </div>
+
+        <div class="tab-panel hidden" id="food">
+      <div class="insight-card">
+        <h4>🍽️ Food Falls Flat</h4>
+        <ul>
+            <li>1 in 3 passengers gave food a poor score.</li>
+            <li>Even satisfied customers rate meals as just average.</li>
+            <li>Better meals and variety can turn a weak spot into a brand win.</li>
+        </ul>
+      </div>
+    </div>
+
+
+        <div class="tab-panel hidden" id="bag">
+      <div class="insight-card">
+        <h4>🧳 Baggage Done Right</h4>
+        <p>Friendly crew interactions boost repeat-booking intent by 30%.</p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<!-- WAVE SEPARATOR -->
+<section class="wave-separator">
+  <svg viewBox="0 0 1200 50" preserveAspectRatio="none">
+<path
+    d="M0,30 C300,90 900,-30 1200,30 L1200,50 L0,50 Z"
+ />
+  </svg>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-icons">
+    <a href="https://github.com/narasimha-31"
+       target="_blank"
+       class="footer-link"
+       data-title="GitHub">
+      <i class="uil uil-github"></i>
+    </a>
+
+
+    <a href="https://public.tableau.com/app/profile/narasimha.royal/vizzes"
+       target="_blank"
+       class="footer-link"
+       data-title="Tableau Public">
+      <img
+        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tableau.svg"
+        alt="Tableau"
+        class="footer-icon-img">
+    </a>
+
+
+    <a href="https://linkedin.com/in/narasimha31"
+       target="_blank"
+       class="footer-link"
+       data-title="LinkedIn">
+      <i class="uil uil-linkedin"></i>
+    </a>
+
+    
+  </div>
+
+  <div class="portfolio-link">
+    <a href="https://narasimharoyal.com/"
+       target="_blank"
+       class="footer-link">
+      Visit My Portfolio
+    </a>
+  </div>
+
+  <p class="footer-copy">
+    © <span id="year"></span> Narasimha Royal, All rights reserved.
+  </p>
+  
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+
+
+
+
+
+
+<!--JS Code-->
+
+
+<script>
+  function checkScreenSize() {
+    if (window.innerWidth < 1024) {
+      document.body.classList.add('mobile-blocked');
+    } else {
+      document.body.classList.remove('mobile-blocked');
+    }
+  }
+
+  // Check on load
+  checkScreenSize();
+
+  // Check when window is resized
+  window.addEventListener('resize', checkScreenSize);
+</script>
+
+
+
+
+<!-- Papa Parse CDN -->
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+
+<script>
+  Papa.parse('train.csv', {
+    download: true,
+    header: true,
+    complete: function(results) {
+      const data = results.data;
+      const cols = results.meta.fields;      // column names
+      const headerRow = document.getElementById('table-header');
+      const body = document.getElementById('table-body');
+
+      // Build header
+      cols.forEach(col => {
+        const th = document.createElement('th');
+        th.textContent = col;
+        headerRow.appendChild(th);
+      });
+
+      // Build first 5 rows
+      data.slice(0, 10).forEach(row => {
+        const tr = document.createElement('tr');
+        cols.forEach(col => {
+          const td = document.createElement('td');
+          td.textContent = row[col];
+          tr.appendChild(td);
+        });
+        body.appendChild(tr);
+      });
+    }
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs   = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Deactivate all tabs + hide all panels
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.add('hidden'));
+
+        // Activate clicked tab
+        tab.classList.add('active');
+        // Show corresponding panel
+        const target = document.getElementById(tab.dataset.tab);
+        if (target) target.classList.remove('hidden');
+      });
+    });
+  });
+</script>
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs      = document.querySelectorAll('.tab');
+    const slider    = document.querySelector('.tab-slider');
+    const container = document.querySelector('.tabs');
+
+    function updateSlider(activeTab) {
+      const tabRect  = activeTab.getBoundingClientRect();
+      const contRect = container.getBoundingClientRect();
+
+      // Position + size the slider box to wrap the tab
+      slider.style.left   = `${tabRect.left   - contRect.left}px`;
+      slider.style.top    = `${tabRect.top    - contRect.top}px`;
+      slider.style.width  = `${tabRect.width  }px`;
+      slider.style.height = `${tabRect.height }px`;
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // switch active class
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // show/hide panels as before
+        document.querySelectorAll('.tab-panel')
+          .forEach(p => p.classList.add('hidden'));
+        document.getElementById(tab.dataset.tab)
+          .classList.remove('hidden');
+
+        // move the gradient box
+        updateSlider(tab);
+      });
+    });
+
+    // Initialize on load & on resize
+    const initTab = document.querySelector('.tab.active');
+    updateSlider(initTab);
+    window.addEventListener('resize', () => updateSlider(document.querySelector('.tab.active')));
+  });
+</script>
+
+
+
+
+
+
+</body>
+</html>

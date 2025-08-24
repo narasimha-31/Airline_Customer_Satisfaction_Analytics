@@ -1,0 +1,537 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --footer-bg: #2f78b3;  /* tweak this hex to taste */
+}
+
+
+/* Hide the whole body content when on small screens */
+body.mobile-blocked > *:not(.mobile-warning) {
+  display: none !important;
+}
+
+/* Show only the warning box on small screens */
+.mobile-warning {
+  display: none;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+  background: #000; /* match your theme */
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+
+.mobile-warning .warning-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  padding: 2.5rem 3rem;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  font-size: 1.15rem;
+  max-width: 550px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+
+/* Activate this view on screens less than 1024px (tablet and below) */
+@media screen and (max-width: 1023px) {
+  body {
+    overflow: hidden;
+  }
+  body.mobile-blocked .mobile-warning {
+    display: flex;
+  }
+}
+
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Gradient Title */
+.gradient-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff6ec4, #6763da, #4ADEDE,#f8ff00);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s infinite linear;
+}
+
+/* Title Gradient Shine Animation */
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Slogan */
+.slogan {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.slogan .quote {
+  font-style: italic;
+  color: #76c0ff;
+}
+
+
+/* Story Section */
+.story-section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+/* Custom Section Heading */
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Optional underline or glow */
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #76c0ff, #4ADEDE);
+  margin-top: 12px;
+  border-radius: 4px;
+}
+
+/* Story Text Styling */
+.story-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #d0d0d0;
+}
+
+/* Special Transition Line */
+.transition-line {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #76c0ff;
+  margin: 30px 0 10px;
+}
+
+
+
+/* RAW DATA PEEK SECTION */
+.data-peek {
+  padding: 60px 20px;
+  max-width: 1100px;   /* was 1000px or 900px—now narrower */
+  width: 100%;
+  margin: 0 auto;
+  color: #e0e0e0;
+}
+
+/* Enhanced Table Container Frame */
+.table-container {
+  width: 100%;
+  max-width: 100%;
+  height: 260px;          /* fits header + 5 rows */
+  overflow-x: auto;       /* horizontal scroll */
+  overflow-y: auto;       /* vertical scroll */
+  border: 2px solid #444;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+  background-color: #111;
+}
+
+
+/* Let the table size itself to its content */
+.table-container table {
+  border-collapse: collapse;
+  width: max-content;     /* grow wider than container */
+  min-width: 100%;        /* at least fill the container */
+}
+
+/* Cells & Header (keep your prior styling) */
+.table-container th,
+.table-container td {
+  border: 1px solid #555;
+  padding: 8px 12px;
+  white-space: nowrap;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #ddd;
+  background-color: #111;
+}
+
+.table-container thead th {
+  background-color: #222;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+
+
+
+
+.dashboard-note {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #76c0ff;
+}
+
+/* Dashboard Embed Section – left‐align heading */
+.dashboard-section {
+  padding: 60px 20px;
+  max-width: 1200px;        /* up from 1000px */
+  margin: 0 auto;
+  color: #e0e0e0;
+  text-align: left;         /* <— change this from center to left */
+}
+
+/* Keep the note centered if you like */
+.dashboard-note {
+  text-align: center;
+}
+
+
+.dashboard-container {
+  width: 100%;
+  height: 650px;            /* fixed taller height */
+  background-color: #111;
+  border: 2px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Make the iframe fill its container */
+.dashboard-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+
+
+/* Insights Section */
+.insights-section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #e0e0e0;
+}
+
+/* Make sure the container is positioned */
+.tabs {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Layer tabs above the slider */
+.tab {
+  position: relative;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s;
+  color: #bbb;
+}
+.tab.active,
+.tab:hover {
+  color: #fff;
+}
+
+.tab-slider {
+  /* keep everything else the same… */
+  position: absolute;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-image-source: linear-gradient(
+    90deg,
+    #f8ff00,
+    #ff6ec4,
+    #7873f5,
+    #4ADEDE
+  );
+  border-image-slice: 1;
+  border-image-width: 2px;
+  border-image-repeat: stretch;
+  background: transparent;
+
+
+
+  transition:
+    left   0.5s cubic-bezier(0.4, 0.0, 0.2, 1),
+    top    0.5s cubic-bezier(0.4, 0.0, 0.2, 1),
+    width  0.5s cubic-bezier(0.4, 0.0, 0.2, 1),
+    height 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+  z-index: 0;
+}
+
+
+
+
+
+
+
+
+/* Tab Panels Wrapper */
+.tab-content {
+  margin-top: 30px;
+}
+
+/* Hide non-active panels */
+.tab-panel.hidden {
+  display: none;
+}
+
+/* Center & enlarge insight cards */
+.tab-panel {
+  display: grid;
+  justify-content: center;      /* centers grid items when fewer columns */
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;                    /* space between cards */
+  margin-top: 20px;
+}
+
+.insight-card {
+  background-color: #111;             /* dark background */
+  border: 2px solid #333;             /* subtle border */
+  border-radius: 8px;                 /* rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);  /* dark shade beneath */
+  padding: 24px;                      /* your padding */
+  max-width: 700px;                   /* cap width */
+  width: 100%;
+  margin: 0 auto;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.insight-card ul {
+  padding-left: 1.1rem;
+  list-style: none;
+}
+
+.insight-card ul li::before {
+  content: "→ ";
+  color: var(--highlight-color, #236ed8); /* Or use any color you like */
+  font-weight: bolder;
+}
+
+
+.insight-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    /* top glow */
+    0 -6px 12px rgba(118, 192, 255, 0.5),
+    /* left glow */
+    -6px 0 12px rgba(118, 192, 255, 0.3),
+    /* right glow */
+    6px 0 12px rgba(118, 192, 255, 0.3),
+    /* subtle base shadow */
+    0 4px 12px rgba(0, 0, 0, 0.5);
+  /* keep border unchanged */
+}
+
+/* Card Headings & Text */
+.insight-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.insight-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+
+
+
+/*FOOTER*/
+
+
+/* Wave Separator */
+.wave-separator svg {
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+.wave-separator path {
+  fill: var(--footer-bg);
+  stroke: none;
+}
+
+
+
+/* Footer Base */
+.site-footer {
+  background-color: var(--footer-bg);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Icon Row */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.footer-icons .footer-link {
+  position: relative;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.footer-icon-img,
+.footer-icons .uil {
+  display: block;
+  width: 28px;
+  height: 28px;
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+
+/* Portfolio Link */
+.portfolio-link {
+  margin-bottom: 16px;
+}
+.portfolio-link .footer-link {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+/* Tooltip bubbles for icons and portfolio link */
+.site-footer .footer-link::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  color: #fff;
+  background: rgba(0,0,0,0.75);
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+.site-footer .footer-link[data-title]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+
+/* Force any black-filled SVG img in footer to pure white */
+.footer-icon-img {
+  filter: brightness(0) invert(1);
+}
+
+/* make sure the icon can show a gradient background */
+.footer-icons .footer-link .uil {
+  display: inline-block;            /* needed for background-clip */
+  background: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: currentColor;
+  transition: background 0.4s ease;
+}
+
+/* on hover: swap the text-fill to the gradient */
+.footer-icons .footer-link:hover .uil {
+  background: linear-gradient(
+    90deg,
+
+    #f8ff00,  /* yellow */
+    #ff6ec4,  /* pink */
+    #6663d2,
+    #6663d2
+      
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.portfolio-link .footer-link {
+  display: inline-block;
+  background: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: currentColor;
+  transition: background 0.4s ease;
+}
+
+.portfolio-link .footer-link:hover {
+  background: linear-gradient(
+    90deg,
+   
+    #f8ff00,
+    #ff6ec4,
+    #625fc9,
+    #f8ff00
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
