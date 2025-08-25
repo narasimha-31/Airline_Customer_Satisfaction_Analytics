@@ -53,7 +53,6 @@ The focus is on **EDA (Exploratory Data Analysis)**, data cleaning, and **visual
 |------------------------|---------------------|
 | ![Type](visuals/satisfaction_by_type.png) | ![Corr](visuals/correlation_heatmap.png) |
 
-> 💡 Add more screenshots in `visuals/` to showcase analysis highlights.
 
 
 
