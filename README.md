@@ -55,7 +55,17 @@ The focus is on **EDA (Exploratory Data Analysis)**, data cleaning, and **visual
 
 > 💡 Add more screenshots in `visuals/` to showcase analysis highlights.
 
+
+
 <hr style="border: none; border-top: 1px solid #000; height: 1px; margin: 20px 0;" />
+
+### 🌐 Live Web Report
+
+Explore the hosted version of this analysis at:  
+👉 [https://airline-satisfaction.netlify.app](https://airline-satisfaction.netlify.app)
+
+<hr style="border: none; border-top: 1px solid #000; height: 1px; margin: 20px 0;" />
+
 
 ### 📬 Contact
 
