@@ -40,5 +40,23 @@ The focus is on **EDA (Exploratory Data Analysis)**, data cleaning, and **visual
 
 <hr style="border: none; border-top: 1px solid #000; height: 1px; margin: 20px 0;" />
 
-### 📂 Folder Structure
+
+<hr style="border: none; border-top: 1px solid #000; height: 1px; margin: 20px 0;" />
+
+### 📸 Screenshots
+
+| Satisfaction Breakdown | Correlation Heatmap |
+|------------------------|---------------------|
+| ![Type](visuals/satisfaction_by_type.png) | ![Corr](visuals/correlation_heatmap.png) |
+
+> 💡 Add more screenshots in `visuals/` to showcase analysis highlights.
+
+<hr style="border: none; border-top: 1px solid #000; height: 1px; margin: 20px 0;" />
+
+### 📬 Contact
+
+Made with ❤️ by **Narasimha Royal**  
+_Masters in Computer Science @ University of Houston_  
+[LinkedIn](https://www.linkedin.com/in/narasimha31)
+
 
