@@ -62,7 +62,7 @@ The focus is on **EDA (Exploratory Data Analysis)**, data cleaning, and **visual
 ### 🌐 Live Web Report
 
 Explore the hosted version of this analysis at:  
-👉 [https://airline-satisfaction.netlify.app](https://acsa1.netlify.app)
+👉 [Live Web Page](https://acsa1.netlify.app)
 
 <hr style="border: none; border-top: 1px solid #000; height: 1px; margin: 20px 0;" />
 
