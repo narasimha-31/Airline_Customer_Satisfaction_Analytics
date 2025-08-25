@@ -70,7 +70,7 @@ Explore the hosted version of this analysis at:
 
 Made with ❤️ by **Narasimha Royal**  
 _Masters in Computer Science @ University of Houston_  
-[Portfolio](https://www.narasimharoyal.com)
+[Portfolio](https://www.narasimharoyal.com) <br>
 [LinkedIn](https://www.linkedin.com/in/narasimha31)
 
 
