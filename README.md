@@ -14,7 +14,7 @@ An end-to-end data analysis project exploring factors that influence customer sa
 This project analyzes a real-world airline customer satisfaction dataset to uncover patterns, correlations, and insights that affect passenger experience.  
 The focus is on **EDA (Exploratory Data Analysis)**, data cleaning, and **visual storytelling** using plots and summary tables.
 
-> ✈️ From missing value handling to plotting satisfaction trends — all steps are covered with clean code and insights.
+> ✈️ From missing value handling to plotting satisfaction trends, all steps are covered with clean code and insights.
 
 <hr style="border: none; border-top: 1px solid #000; height: 1px; margin: 20px 0;" />
 
