@@ -2,7 +2,10 @@
 
 <p align="center">
 An end-to-end data analysis project exploring factors that influence customer satisfaction in airline services using Python and pandas.
+<br />
+🌐 <a href="https://airline-satisfaction.netlify.app/" target="_blank"><strong>→ Live Project Website</strong></a>
 </p>
+
 
 <hr style="border: none; border-top: 1px solid #000; height: 1px; margin: 20px 0;" />
 
