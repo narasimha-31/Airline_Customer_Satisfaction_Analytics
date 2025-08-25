@@ -36,7 +36,7 @@ The focus is on **EDA (Exploratory Data Analysis)**, data cleaning, and **visual
   <img src="https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=matplotlib&logoColor=white" />
   <img src="https://img.shields.io/badge/Seaborn-5A5AAD?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" />
-    <img src="https://img.shields.io/badge/Tableau-F37626?style=for-the-badge&logo=tableau&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tableau-F37626?style=for-the-badge&logo=tableau&logoColor=white" />
 </div>
 
 <hr style="border: none; border-top: 1px solid #000; height: 1px; margin: 20px 0;" />
